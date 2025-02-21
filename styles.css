@@ -2,6 +2,10 @@
 
 :root {
     line-height: 1.5;
+    --dark-green: #0b652f87;
+    --light-green: #0b652f13;
+    --subtext-color: #000000d2;
+    --card-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
 }
   
 h1, h2, h3, h4, h5, figure, p, ol, ul {
@@ -38,7 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     row-gap: 50px;
-    background-color: #0b652f87;
+    background-color: var(--dark-green);
     color: white;
     padding: 20px 0 0 20px;
 }
@@ -93,7 +97,7 @@ body {
 
 .search-bar input {
     flex: 1;
-    background-color: #0b652f13;
+    background-color: var(--light-green);
     height: 35px;
     border: none;
     border-radius: 100px;
@@ -154,7 +158,7 @@ body {
 
 .action-buttons button {
     flex: 1;
-    background-color: #0b652f87;
+    background-color: var(--dark-green);
     color: white;
     height: 35px;
     border: none;
@@ -168,7 +172,7 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     padding: 20px 60px 30px 30px;
-    background-color: #0b652f13;
+    background-color: var(--light-green);
 }
 
 h1 {
@@ -200,7 +204,7 @@ h2 {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: var(--card-shadow);
     border-left: 6px solid #f3603fe7;
     display: grid;
     grid-template-rows: 1fr 4fr 1fr;
@@ -208,7 +212,7 @@ h2 {
 
 .card-text {
     font-size: 0.9rem;
-    color: #000000d2;
+    color: var(--subtext-color);
 }
 
 .card-actions {
@@ -218,28 +222,23 @@ h2 {
     align-self: end;
 }
 
-.favorite-icon {
+.action-icon {
     width: 25px;
     height: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.favorite {
     background-image: url('icons/star-plus-outline.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.view-icon {
-    width: 25px;
-    height: 25px;
+.view {
     background-image: url('icons/eye-plus-outline.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.share-icon {
-    width: 25px;
-    height: 25px;
+.share {
     background-image: url('icons/share-variant-outline.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .announcements h2 {
@@ -247,14 +246,14 @@ h2 {
     font-weight: 600;
 }
 
-.announcement-container {
+.subcontainer {
     padding: 15px 25px;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: var(--card-shadow);
 }
 
 .announcement-section {
@@ -274,18 +273,7 @@ h2 {
     line-clamp: 3;
     box-orient: vertical;
     font-size: 0.8rem;
-    color: #000000d2;
-}
-
-.trending-container {
-    padding: 15px 25px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    color: var(--subtext-color);
 }
 
 .account {
@@ -302,5 +290,5 @@ h2 {
 }
 
 .account-project {
-    color: #000000d2;
+    color: var(--subtext-color);
 }
