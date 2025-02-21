@@ -27,11 +27,10 @@ img {
 body {
     height: 100vh;
     display: grid;
-    grid-template: 1fr 6fr / 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 
         'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 
         'Helvetica Neue', sans-serif;
-    
 }
 
 .sidebar {
@@ -80,9 +79,10 @@ body {
 
 .header {
     display: grid;
-    grid-template: 1fr 2fr / 2fr 1fr;
-    padding: 20px 60px 0 20px;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px 60px 15px 30px;
     gap: 20px 100px;
+    box-shadow: 0px 5px 5px -5px rgba(0, 0, 0, 0.75);
 }
 
 .search-bar {
@@ -104,34 +104,90 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 30px;
+}
+
+.notification {
+    width: 25px;
+}
+
+.user-info .avatar {
+    width: 50px;
+    margin-right: -15px;
+}
+
+.user-info span {
+    font-size: 1.15rem;
+    font-weight: 700;
 }
 
 .greeting {
     display: grid;
-    grid-template: auto auto / 1fr 5fr;
-    place-items: start;
+    grid-template-columns: max-content max-content;
+    place-items: center start;
+    column-gap: 15px;
+    
 }
 
 .greeting .avatar {
     grid-row: 1 / 3;
+    width: 70px;
+}
+
+.greeting-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.username {
+    font-size: 1.2rem;
+    font-weight: 700;
+    align-self: start;
 }
 
 .action-buttons {
     display: flex;
-    align-items: start;
+    align-items: center;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 20px;
+}
+
+.action-buttons button {
+    flex: 1;
+    background-color: #0b652f87;
+    color: white;
+    height: 35px;
+    border: none;
+    border-radius: 100px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .main-content {
     display: grid;
-    grid-template: auto auto / 3fr 1fr;
-    padding: 20px 0 0 20px;
+    grid-template-columns: 3fr 1fr;
+    padding: 20px 60px 30px 30px;
+    background-color: #0b652f13;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.main-content > div > div {
+    margin-top: 10px;
 }
 
 .projects {
     grid-row: 1 / 3;
+    padding-right: 30px;
 }
 
 .project-container {
@@ -140,26 +196,111 @@ body {
     gap: 20px;
 }
 
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+    border-left: 6px solid #f3603fe7;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #000000d2;
+}
+
 .card-actions {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 20px;
+    align-self: end;
+}
+
+.favorite-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url('icons/star-plus-outline.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.view-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url('icons/eye-plus-outline.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.share-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url('icons/share-variant-outline.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.announcements h2 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.announcement-container {
+    padding: 15px 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
+}
+
+.announcement-section {
+    border-bottom: 1px solid #0000007b;
+    padding: 10px 0;
+}
+
+.announcement-section:last-child {
+    border-bottom: none;
 }
 
 .announcement-text {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; /* Number of lines before ellipsis */
+    -webkit-line-clamp: 3;
     line-clamp: 3;
     box-orient: vertical;
+    font-size: 0.8rem;
+    color: #000000d2;
+}
+
+.trending-container {
+    padding: 15px 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px -5px rgba(0, 0, 0, 0.75);
 }
 
 .account {
     display: grid;
-    grid-template: 2fr 5fr / 1fr 5fr;
+    grid-template-columns: max-content max-content;
+    place-items: center start;
+    column-gap: 15px;
+    font-size: 0.9rem;
 }
 
 .account .account-avatar {
     grid-row: 1 / 3;
+    width: 40px;
+}
+
+.account-project {
+    color: #000000d2;
 }
