@@ -2,7 +2,7 @@
 
 ## Description
 
-A dashboard page to create a visually appealing and functional interface for administrators using HTML and CSS only.
+A dashboard page with a visually appealing and functional interface for administrators using HTML and CSS only.
 
 Live: <https://gofhilman.github.io/admin-dashboard/>
 
